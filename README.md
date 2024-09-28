@@ -13,7 +13,7 @@ This Python-based project aims to fetch real-time YouTube metrics like likes, vi
 - [Video](#video)
 
 ## System Architecture
-![YouTube Analytics Architecture](images/YoutubeAnalytics_architecture.png)
+![YouTube Analytics Architecture](Ytanalytics.png)
 
 ## Requirements
 - **Python 3.10** (minimum)
