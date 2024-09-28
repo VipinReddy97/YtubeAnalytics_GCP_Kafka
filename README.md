@@ -9,11 +9,10 @@ This Python-based project aims to fetch real-time YouTube metrics like likes, vi
 - [Configuration](#configuration)
 - [Running the Code](#running-the-code)
 - [How It Works](#how-it-works)
-- [Contributing](#contributing)
-- [Video](#video)
+
 
 ## System Architecture
-![YouTube Analytics Architecture](YtubeAnalytics_GCP_Kafka/ytanalytics.png)
+![YouTube Analytics Architecture](ytanalytics.png)
 
 ## Requirements
 - **Python 3.10** (minimum)
@@ -41,4 +40,7 @@ pip install -r requirements.txt
 # YOUTUBE_API_KEY: Your YouTube API Key
 # PLAYLIST_ID: The YouTube playlist ID you want to track
 # Additionally, set up your Kafka server address in the main script. By default, it's set to `localhost:9092`.
+
+## How it Works
+Fetches video data from the YouTube API using the provided playlist ID. Streams the data to a Kafka topic for further processing. Another component (discussed in the video but not covered here) will consume data from this Kafka topic and run real-time analytics using ksqlDB. Finally, the results of the analytics are forwarded to Telegram to provide real-time alerts.
 
